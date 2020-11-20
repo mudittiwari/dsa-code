@@ -1,0 +1,28 @@
+DAY ONE LEARNING
+-------------------------------------------------------------------------------------------------------------------------
+1. DOUBLE POINTER USE TO SHIFT NEGATIVE ELEMENTS ONE SIDE AND POSITIVE ELEMENTS THE OTHER SIDE
+THIS APPROACH WILL MINIMIZE THE USE OF EXTRA MEMORY 
+
+STEPS::
+1. we first initialized the two pointers left and right with first element and last element respectively.
+2. then we followed three steps::
+    1. if the left and right elements are positive we simply decrease the right pointer
+    2. if the left and right elements are negative we simply increase the left pointer
+    3. if the left element is positive and the right element is negative we simply swap them.
+    4. we do this approach till the right and left pointer becomes same.
+    
+2. FACTORIAL OF A LARGE NUMBER
+
+STEPS::
+1. we used array to store the every digit of the answer.
+2. we stored the answer in reverse order in the array so that when we do next multiplication we can easily add the carry at the end of the array.
+3. we start a loop from 2 to n and make a array with 1 in it and every time initialize the carry with one.
+4. now we iterate the array and multiply its every number with the X(next number in the factorial) and use the formula to find the
+product  product=X*arr[i] + carry;
+5. now if the product is one digit we replace the arr[i] with the product
+6. else we replace the arr[i] with the last digit of the product and append the carry with the remaining digits.
+          arr[i]=product%10;
+          carry=product/10;
+7. now when we reach the last number of the array we simpy append the array with the carry digits.
+
+--------------------------------------------------------------------------------------------------------------------------
