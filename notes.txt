@@ -26,3 +26,21 @@ product  product=X*arr[i] + carry;
 7. now when we reach the last number of the array we simpy append the array with the carry digits.
 
 --------------------------------------------------------------------------------------------------------------------------
+
+DAY TWO LEARNING
+
+--------------------------------------------------------------------------------------------------------------------------
+
+1. FIND THE INTERSECTION POINT OF TWO LINKED LISTS
+
+STEPS::
+1. let the lenght of the first linked list is sizeone and the length of the second linked list be sizetwo.
+2. now what we did is we deleted the starting biglen-smalllen elements from the big linked list.
+3. now we matched the front elements of the linked lists and if they are not equal we deleted them.
+4. in case these elements are equal then we start a loop from that node and check if all the remaining elements are equal.
+5. if they are equal then the answer will be the starting or front node of the linked list.
+6. else what we did is we deleted the nodes till the nodes which are not equal and then did step 3 again.
+
+in this approach we didnot used any other linked list or any extra space.
+
+
