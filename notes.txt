@@ -43,4 +43,9 @@ STEPS::
 
 in this approach we didnot used any other linked list or any extra space.
 
+----------------------------------------------------------------------------------------------------------------------------
+GCD PROPERTIES LEARNT
+GCD(A,B,C)==GCD(A,GCD(B,C))==GCD(B,GCD(A,C))==GCD(C,GCD(A,B))
+GCD(A,B,C)==GCD(A,A-B,A-C)==GCD(B-A,B,B-C)==GCD(C-A,C-B,C)
+THESE WERE LEARNT IN FIRST VIRTUAL CONTEST PROBLEM C.
 
