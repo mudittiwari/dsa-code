@@ -39,11 +39,10 @@ int main()
 		{
 			if(arr[i-1]<=j)
 			{
-				dp2[i][j]=max(price[i-1]+knapsack(arr,price,j-arr[i-1],i-1),
-			knapsack(arr,price,j,i-1));
+				dp2[i][j]=max(price[i-1]+dp2[i-1][j-arr[i-1]],dp2[i-1][j]);
 			}
 			else
-				dp2[i][j]=knapsack(arr,price,j,i-1);
+				dp2[i][j]=dp2[i-1][j];
 		}
 	}
 	for(int i=0;i<=4;i++)
