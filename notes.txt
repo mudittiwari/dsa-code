@@ -49,3 +49,11 @@ GCD(A,B,C)==GCD(A,GCD(B,C))==GCD(B,GCD(A,C))==GCD(C,GCD(A,B))
 GCD(A,B,C)==GCD(A,A-B,A-C)==GCD(B-A,B,B-C)==GCD(C-A,C-B,C)
 THESE WERE LEARNT IN FIRST VIRTUAL CONTEST PROBLEM C.
 
+
+
+
+BINARY TREE TO CIRCULAR DOUBLY LINKED LIST:
+-> First do inorder traversal of the linked list
+-> In place of printing the node value add that to linked list
+-> To convert doubly linked list to circular list simply traverse the list to last node
+-> Now first node left will have this node address and this node right will have first node address.
