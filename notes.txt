@@ -57,3 +57,9 @@ BINARY TREE TO CIRCULAR DOUBLY LINKED LIST:
 -> In place of printing the node value add that to linked list
 -> To convert doubly linked list to circular list simply traverse the list to last node
 -> Now first node left will have this node address and this node right will have first node address.
+
+
+
+
+SWAP K-TH ELEMENT FROM START AND END OF LINKED LIST
+-Code uploaded take reference from there.
