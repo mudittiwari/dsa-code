@@ -68,3 +68,8 @@ CONSTRUCT BINARY SEARCH TREE FROM POSTORDER TRAVERSAL
 --we are given the array of postorder traversal
 --now we traverse the array from end and add every node into the tree
 --this will construct the correct binary search tree
+
+
+LCS OF TWO NODES IN BST
+--traverse the tree and find first node and store all its parent node in a set
+--now traverse the tree again to find second node and check if it recent parent is present in set....return its most recent parent
