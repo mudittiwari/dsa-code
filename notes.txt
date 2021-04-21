@@ -63,3 +63,8 @@ BINARY TREE TO CIRCULAR DOUBLY LINKED LIST:
 
 SWAP K-TH ELEMENT FROM START AND END OF LINKED LIST
 -Code uploaded take reference from there.
+
+CONSTRUCT BINARY SEARCH TREE FROM POSTORDER TRAVERSAL
+--we are given the array of postorder traversal
+--now we traverse the array from end and add every node into the tree
+--this will construct the correct binary search tree
