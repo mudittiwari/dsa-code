@@ -73,3 +73,5 @@ CONSTRUCT BINARY SEARCH TREE FROM POSTORDER TRAVERSAL
 LCS OF TWO NODES IN BST
 --traverse the tree and find first node and store all its parent node in a set
 --now traverse the tree again to find second node and check if it recent parent is present in set....return its most recent parent
+
+IF A ARRAY IS SORTED AND CONTAINS ALL THE UNIQUE ELEMENTS THEN IT CAN FORM A BINARY SEARCH TREE.
