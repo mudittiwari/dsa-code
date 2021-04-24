@@ -87,3 +87,8 @@ MAX DISTANCE BETWEEN SIMILAR ELEMENTS IN THE ARRAY
 --this pair will have first index of the element and max distance
 --when we will find a repeating element in the array we will change its max distance and do this till last element
 --now to find max distance we simply traverse the map and return the max value of the distance
+
+CHECK IF A SUBARRAY IS PRESENT WITH SUM ZERO
+--we make a unordered_set to store the sum
+--now we traverse the array from begin and store the sum of the elements(starting from zero to that element) in the set.
+--if the sum is already present in the set it means that there is a subarray with sum zero in the whole array.
