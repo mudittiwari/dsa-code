@@ -92,3 +92,4 @@ CHECK IF A SUBARRAY IS PRESENT WITH SUM ZERO
 --we make a unordered_set to store the sum
 --now we traverse the array from begin and store the sum of the elements(starting from zero to that element) in the set.
 --if the sum is already present in the set it means that there is a subarray with sum zero in the whole array.
+--time complexity is O(n) and space complexity is O(n).
