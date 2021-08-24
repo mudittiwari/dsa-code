@@ -4,6 +4,8 @@ using namespace std;
 vector<int> ans;
 void dfs(vector<int> [],vector<int>&,int);//on adjacency list
 void dfs(vector<vector<int>>,vector<int>&,int);//on adjacency matrix
+vector<int> bfs(vector<vector<int>>,int,int);//adjacency matrix
+vector<int> bfs(vector<int> [],int,int);//adjacency list
 void printgraph(vector<int>[],int);//adjacency list print
 void printgraph(vector<vector<int>>);//adjacency matrix print
 
@@ -57,6 +59,53 @@ void dfs(vector<vector<int>> graph,vector<int> &visited,int node)
 	}
 }
 
+vector<int> bfs(vector<int> graph[],int node,int n)
+{
+	vector<int> bfsans;
+	vector<int> visited(n+1,0);
+	queue<int> q;
+	q.push(node);
+	visited[node]=1;
+	while(!q.empty())
+	{
+		int temp=q.front();
+		q.pop();
+		bfsans.push_back(temp);
+		for(int i=0;i<graph[temp].size();i++)
+		{
+			if(!visited[graph[temp][i]])
+			{
+				q.push(graph[temp][i]);
+				visited[graph[temp][i]]=1;
+			}
+		}
+	}
+	return bfsans;
+}
+
+vector<int> bfs(vector<vector<int>> graph,int node,int n)
+{
+	vector<int> bfsans;
+	vector<int> visited(n+1,0);
+	queue<int> q;
+	q.push(node);
+	visited[node]=1;
+	while(!q.empty())
+	{
+		int temp=q.front();
+		q.pop();
+		bfsans.push_back(temp);
+		for(int i=0;i<graph[temp].size();i++)
+		{
+			if(graph[temp][i] && !visited[i])
+			{
+				q.push(i);
+				visited[i]=1;
+			}
+		}
+	}
+	return bfsans;
+}
 
 void adjacencymatrix(int n,int e)
 {
@@ -69,10 +118,14 @@ void adjacencymatrix(int n,int e)
 		graph[v][u]=1;
 	}
 	printgraph(graph);
-	vector<int> visited(n+1,0);
-	dfs(graph,visited,0);
+	// vector<int> visited(n+1,0);
+	// dfs(graph,visited,0);
+	// for(int i=0;i<ans.size();i++)
+	// 	cout<<ans[i]<<" ";
+	vector<int> ans=bfs(graph,0,n);
 	for(int i=0;i<ans.size();i++)
 		cout<<ans[i]<<" ";
+	cout<<endl;
 }
 
 void adjacencylist(int n,int e)
@@ -86,10 +139,14 @@ void adjacencylist(int n,int e)
 		graph[v].push_back(u);
 	}
 	printgraph(graph,n+1);
-	vector<int> visited(n+1,0);
-	dfs(graph,visited,0);
+	// vector<int> visited(n+1,0);
+	// dfs(graph,visited,0);
+	// for(int i=0;i<ans.size();i++)
+	// 	cout<<ans[i]<<" ";
+	vector<int> ans=bfs(graph,0,n);
 	for(int i=0;i<ans.size();i++)
 		cout<<ans[i]<<" ";
+	cout<<endl;
 }
 
 void Solve()
@@ -97,7 +154,7 @@ void Solve()
 	// n is the number of nodes and e is the number of edges
 	int n,e;
 	cin>>n>>e;
-	adjacencylist(n,e);
+	adjacencymatrix(n,e);
 }
 
 int main()
